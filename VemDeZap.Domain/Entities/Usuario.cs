@@ -1,8 +1,9 @@
-﻿namespace VemDeZap.Domain.Entities;
+﻿using VemDeZap.Domain.Entities.Base;
 
-public class Usuario
+namespace VemDeZap.Domain.Entities;
+
+public class Usuario : EntityBase
 {
-    public Guid Id { get; set; }
     public string PrimeiroNome { get; set; }
     public string UltimoNome { get; set; }
     public string Email { get; set; }

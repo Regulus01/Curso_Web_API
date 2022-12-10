@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="VemDeZap.Domain.Entities.Campanha">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAEAAAA=</HashCode>
+      <FileName>Entities\Campanha.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Usuario" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="VemDeZap.Domain.Entities.Contato">
+    <Position X="2.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAEAAEAAAA=</HashCode>
+      <FileName>Entities\Contato.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Usuario" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="VemDeZap.Domain.Entities.Envio">
+    <Position X="7" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAUAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Envio.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Campanha" />
+      <Property Name="Contato" />
+      <Property Name="Grupo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="VemDeZap.Domain.Entities.Grupo">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAEAAAA=</HashCode>
+      <FileName>Entities\Grupo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Usuario" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="VemDeZap.Domain.Entities.Usuario">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAgAAACAAA=</HashCode>
+      <FileName>Entities\Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

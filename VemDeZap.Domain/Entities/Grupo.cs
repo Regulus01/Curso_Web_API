@@ -1,8 +1,10 @@
-﻿namespace VemDeZap.Domain.Entities;
+﻿using VemDeZap.Domain.Entities.Base;
 
-public class Grupo
+namespace VemDeZap.Domain.Entities;
+
+public class Grupo : EntityBase
 {
-    public Guid Id { get; set; }      
+    public Usuario Usuario { get; set; }
     public string Nome { get; set; }
     public int Nicho { get; set; }
 }

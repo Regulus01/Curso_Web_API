@@ -1,8 +1,10 @@
-﻿namespace VemDeZap.Domain.Entities;
+﻿using VemDeZap.Domain.Entities.Base;
 
-public class Contato
+namespace VemDeZap.Domain.Entities;
+
+public class Contato : EntityBase
 {
-    public Guid Id { get; set; }
+    public Usuario Usuario { get; set; }
     public string Nome { get; set; }
     public string Telefone { get; set; }
     public int Nicho { get; set; }
