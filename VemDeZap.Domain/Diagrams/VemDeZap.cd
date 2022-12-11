@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="VemDeZap.Domain.Entities.Campanha">
-    <Position X="4.75" Y="1.75" Width="1.5" />
+    <Position X="2" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAEAAAA=</HashCode>
       <FileName>Entities\Campanha.cs</FileName>
@@ -11,13 +11,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="VemDeZap.Domain.Entities.Contato">
-    <Position X="2.5" Y="4.25" Width="1.5" />
+    <Position X="4.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAEAAEAAAA=</HashCode>
       <FileName>Entities\Contato.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Usuario" />
+      <Property Name="Nicho" />
     </ShowAsAssociation>
   </Class>
   <Class Name="VemDeZap.Domain.Entities.Envio">
@@ -40,6 +41,7 @@
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Usuario" />
+      <Property Name="Nicho" />
     </ShowAsAssociation>
   </Class>
   <Class Name="VemDeZap.Domain.Entities.Usuario">
@@ -49,12 +51,12 @@
       <FileName>Entities\Usuario.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="VemDeZap.Domain.Entities.Base.EntityBase" Collapsed="true">
-    <Position X="6.5" Y="6.75" Width="1.5" />
+  <Enum Name="VemDeZap.Domain.Enums.EnumNicho" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\Base\EntityBase.cs</FileName>
+      <HashCode>gCAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Enums\EnumNicho.cs</FileName>
     </TypeIdentifier>
-  </Class>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
