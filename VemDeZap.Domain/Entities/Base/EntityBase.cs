@@ -1,6 +1,8 @@
-﻿namespace VemDeZap.Domain.Entities.Base
+﻿using prmToolkit.NotificationPattern;
+
+namespace VemDeZap.Domain.Entities.Base
 {
-    public abstract class EntityBase
+    public abstract class EntityBase : Notifiable
     {
         public Guid Id { get; set; }
 

@@ -7,13 +7,14 @@ namespace VemDeZap.Domain.Commands.Usuario.AdicionarUsuario
 {
     public class AdicionarUsuarioHandler : Notifiable, IRequestHandler<AdicionarUsuarioRequest, Response>
     {
+        private readonly IMediator _mediator;
         private readonly IRepositoryUsuario _repository;
 
-        public AdicionarUsuarioHandler(IRepositoryUsuario repository)
+        public AdicionarUsuarioHandler(IMediator mediator = null, IRepositoryUsuario repository = null)
         {
+            _mediator = mediator;
             _repository = repository;
         }
-
         public async Task<Response> Handle(AdicionarUsuarioRequest? request, CancellationToken cancellationToken)
         {
             //valida se o request veio preenchido
@@ -29,16 +30,21 @@ namespace VemDeZap.Domain.Commands.Usuario.AdicionarUsuario
                 return new Response(this);
             }
 
-            var usuario = new UsuarioDomain();
+            var usuario = new UsuarioDomain(request.PrimeiroNome, request.UltimoNome, request.Email, request.Senha);
 
-            usuario.PrimeiroNome = request.PrimeiroNome;
-            usuario.PrimeiroNome = request.UltimoNome;
-            usuario.Email = request.Email;
-            usuario.Senha = request.Senha;
+            AddNotifications(usuario);
 
-            _repository.Adicionar(usuario);
+            if (IsInvalid())
+                return new Response(this);
+            
+            usuario = _repository.Adicionar(usuario);
+            var response = new Response(this, usuario);
 
-            return new Response(this);
+            var adicionarUsuarioNotification = new AdicionarUsuarioNotification(usuario);
+
+            await _mediator.Publish(adicionarUsuarioNotification);
+            
+            return await Task.FromResult(response);
         }
     }
 }
